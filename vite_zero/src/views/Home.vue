@@ -1,5 +1,5 @@
 <template>
-  <Hello name="Vite User" />
+  <Hello name="Vite User Fallow" />
 </template>
 
 <style scoped>
@@ -12,12 +12,14 @@
 }
 </style>
 
-<script>
-import Hello from '../components/Hello.vue'
+<script setup>
+import { useStore } from "vuex";
+import Hello from "../components/Hello.vue";
 
-export default {
-  components: {
-    Hello
-  }
-}
+const store = useStore()
+
+console.log(store.state.test)
+store.commit('changeTest')
+console.log(store.state.test)
+
 </script>

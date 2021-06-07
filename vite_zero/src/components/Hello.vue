@@ -1,6 +1,6 @@
 <template>
   <div class="wrap">
-    <div class="greet">Hello, {{name}}!</div>
+    <div class="greet">Hello, {{ name }}!</div>
   </div>
 </template>
 
@@ -24,14 +24,14 @@
 }
 </style>
 
-<script>
-export default {
-  props: {
-    name: {
-      type: String,
-      default: 'User'
-    }
-  },
-}
+<script setup>
+import { defineProps, reactive } from "vue";
+
+defineProps({
+  name: {
+    type: String,
+    default: 'User'
+  }
+})
 </script>
 

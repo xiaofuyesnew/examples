@@ -3,12 +3,12 @@ import { createStore } from 'vuex'
 export default createStore({
   state() {
     return {
-      test: '111'
+      test: 0
     }
   },
   mutations: {
-    changeTest(state) {
-      state.test = '222'
+    addTest(state) {
+      state.test++
     }
   }
 })
